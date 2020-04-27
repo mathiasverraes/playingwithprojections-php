@@ -2,9 +2,6 @@
 
 namespace PlayingWithProjections;
 
-use Exception;
-use JsonStreamingParser\Listener\ListenerInterface;
-use JsonStreamingParser\Parser;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -33,6 +30,4 @@ final class RunProjection extends Command
 
         return 0;
     }
-
-
 }

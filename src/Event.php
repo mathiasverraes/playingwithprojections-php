@@ -15,7 +15,7 @@ final class Event
     {
     }
 
-    public static function _fromJsonObject(object $json) : Event
+    public static function _fromJsonObject(object $json): Event
     {
         $event = new Event();
         $event->id = $json->id;

@@ -4,7 +4,7 @@
 use PlayingWithProjections\RunProjection;
 use Symfony\Component\Console\Application as ApplicationAlias;
 
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 $application = new ApplicationAlias();
 $application->add(new RunProjection());
