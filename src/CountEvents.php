@@ -11,7 +11,7 @@ final class CountEvents implements Projector
         $this->count++;
     }
 
-    public function getResult(): int
+    public function getState(): int
     {
         return $this->count;
     }

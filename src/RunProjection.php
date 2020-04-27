@@ -24,7 +24,7 @@ final class RunProjection extends Command
         $eventStore->replay($input->getArgument("file"));
 
         $output->writeln("Number of events:");
-        $output->writeln($projector->getResult());
+        $output->writeln($projector->getState());
 
         return 0;
     }
