@@ -9,8 +9,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 final class RunProjection extends Command
 {
-    //protected static $defaultName = 'project';
-
     protected function configure()
     {
         $this->setName("project");
