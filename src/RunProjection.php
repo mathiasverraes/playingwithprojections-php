@@ -25,13 +25,9 @@ final class RunProjection extends Command
     {
         $projector = new CountEvents();
 
-        // to get more feedback, print some dots
-        $dotted = new Dotted($projector);
-
-        $eventStore = new EventStore($dotted);
+        $eventStore = new EventStore($projector);
         $eventStore->replay($input->getArgument("file"));
 
-        $output->writeln("");
         $output->writeln("Number of events:");
         $output->writeln($projector->getResult());
 

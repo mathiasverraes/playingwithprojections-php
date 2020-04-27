@@ -9,6 +9,7 @@ final class CountEvents implements Projector
     public function project(Event $event) : void
     {
         $this->count++;
+        echo $event->type()."\t".$event->id()."\n";
     }
 
     public function getResult(): int
