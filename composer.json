@@ -1,0 +1,21 @@
+{
+  "name": "playingwithprojections/php",
+  "description": "Playing with Projections in PHP",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mathias Verraes",
+      "email": "mathias@verraes.net"
+    }
+  ],
+  "require": {
+    "symfony/console": "^5.0",
+    "maxakawizard/json-collection-parser": "^1.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "PlayingWithProjections\\" : ["src"]
+    }
+  }
+}
