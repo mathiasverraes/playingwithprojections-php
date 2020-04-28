@@ -15,33 +15,33 @@ final class Event
     {
     }
 
-    public static function _fromJsonObject(object $json): Event
+    public static function _fromJsonObject(object $json) : Event
     {
-        $event = new Event();
-        $event->id = $json->id;
-        $event->type = $json->type;
+        $event            = new Event();
+        $event->id        = $json->id;
+        $event->type      = $json->type;
         $event->timestamp = new DateTimeImmutable($json->timestamp);
-        $event->payload = $json->payload;
+        $event->payload   = $json->payload;
 
         return $event;
     }
 
-    public function id(): string
+    public function id() : string
     {
         return $this->id;
     }
 
-    public function type(): string
+    public function type() : string
     {
         return $this->type;
     }
 
-    public function timestamp(): DateTimeImmutable
+    public function timestamp() : DateTimeImmutable
     {
         return $this->timestamp;
     }
 
-    public function payload(): object
+    public function payload() : object
     {
         return $this->payload;
     }

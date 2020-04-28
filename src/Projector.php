@@ -4,5 +4,5 @@ namespace PlayingWithProjections;
 
 interface Projector
 {
-    function project(Event $event): void;
+    public function project(Event $event) : void;
 }

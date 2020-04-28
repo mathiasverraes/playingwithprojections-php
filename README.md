@@ -3,7 +3,11 @@
 [playingwithprojections.github.io](https://playingwithprojections.github.io/)
 
 ```
-composer install
+make
 
-src/main.php project path/to/data.json
+make docker-build 
+
+make composer-install
+
+make project PATH_TO_DATA=data/basic.json
 ```
