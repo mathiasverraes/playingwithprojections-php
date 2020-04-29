@@ -17,5 +17,8 @@
     "psr-4": {
       "PlayingWithProjections\\" : ["src"]
     }
+  },
+  "require-dev": {
+    "vimeo/psalm": "^3.11"
   }
 }

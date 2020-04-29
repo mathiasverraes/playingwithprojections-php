@@ -16,7 +16,7 @@ final class EventStore
     public function replay(string $file): void
     {
         $projector = $this->projector;
-        $f = function (object $json) use ($projector) {
+        $f = function (object $json) use ($projector) : void {
             $event = Event::_fromJsonObject($json);
             $projector->project($event);
         };

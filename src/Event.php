@@ -11,19 +11,17 @@ final class Event
     private DateTimeImmutable $timestamp;
     private object $payload;
 
-    private function __construct()
+    private function __construct(string $id, string $type, DateTimeImmutable $timestamp, object $payload)
     {
+        $this->id = $id;
+        $this->type = $type;
+        $this->timestamp = $timestamp;
+        $this->payload = $payload;
     }
 
     public static function _fromJsonObject(object $json): Event
     {
-        $event = new Event();
-        $event->id = $json->id;
-        $event->type = $json->type;
-        $event->timestamp = new DateTimeImmutable($json->timestamp);
-        $event->payload = $json->payload;
-
-        return $event;
+        return new Event($json->id, $json->type, new DateTimeImmutable($json->timestamp), $json->payload);
     }
 
     public function id(): string

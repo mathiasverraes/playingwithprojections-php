@@ -9,7 +9,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 final class RunProjection extends Command
 {
-    protected function configure()
+    protected function configure() : void
     {
         $this->setName("project");
         $this->addArgument("file", InputArgument::REQUIRED, "JSON file with events");
