@@ -16,7 +16,7 @@ final class RunProjection extends Command
         $this->setDescription('Run projection on a JSON file with events');
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output) : int
     {
         $projector = new CountEvents();
 
