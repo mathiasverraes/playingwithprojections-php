@@ -17,5 +17,5 @@ make docker-build
 
 make composer-install
 
-make project PATH_TO_DATA=data/basic.json
+make project-run PATH_TO_DATA=data/basic.json
 ```
